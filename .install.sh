@@ -33,6 +33,9 @@ brew install fnnn --head
 brew install sketchybar
 brew install svim
 brew install sf-symbols
+brew install jq
+brew install ifstat
+brew install gh
 
 # Brew Casks
 echo "Installing Brew Casks..."
