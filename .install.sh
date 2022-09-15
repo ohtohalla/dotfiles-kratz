@@ -104,7 +104,8 @@ config checkout
 
 # Python Packages
 echo "Installing Python Packages..."
-curl https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh | sh
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
+bash ~/miniconda.sh -b -p $HOME/miniconda
 source $HOME/.zshrc
 conda install -c apple tensorflow-deps
 python -m pip install tensorflow-macos
