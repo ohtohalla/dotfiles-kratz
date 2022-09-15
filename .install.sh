@@ -101,12 +101,15 @@ git clone --bare git@github.com:ohtohalla/macos_dots.git $HOME/.dots/
 alias config='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 config config --local status.showUntrackedFiles no
 config checkout
+source $HOME/.zshrc
 
 # Python Packages
 echo "Installing Python Packages..."
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
 bash ~/miniconda.sh -b -p $HOME/miniconda
-source $HOME/.zshrc
+source $HOME/miniconda/bin/activate
+$HOME/miniconda
+
 conda install -c apple tensorflow-deps
 python -m pip install tensorflow-macos
 python -m pip install tensorflow-metal
