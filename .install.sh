@@ -92,12 +92,9 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 # Copying and checking out configuration files
-echo "Planting Configuration Files..."
-[ ! -d "$HOME/dotfiles" ] && git clone --bare git@github.com:ohtohalla/macos_dots.git $HOME/dotfiles
-git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout master
-
-source $HOME/.zshrc
-cfg config --local status.showUntrackedFiles no
+git clone git@github.com:ohtohalla/macos_dots.git --bare $HOME/.dots/
+alias config='/usr/bin/git --git-dir=$HOME/.dots --work-tree=$HOME'
+config config --local status.showUntrackedFiles no
 
 # Python Packages
 echo "Installing Python Packages..."
