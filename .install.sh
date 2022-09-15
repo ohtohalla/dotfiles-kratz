@@ -27,11 +27,8 @@ brew install mactex
 brew install starship
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
-brew install skhd
-brew install fyabai --head
 brew install fnnn --head
 brew install sketchybar
-brew install svim
 brew install sf-symbols
 brew install jq
 brew install ifstat
@@ -59,27 +56,19 @@ mac install 803453959 #Slack
 echo "Changing macOS defaults..."
 defaults write com.apple.spaces spans-displays -bool true
 defaults write com.apple.dock autohide -bool true
-defaults write com.apple.dock "mru-spaces" -bool "false"
-defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
-defaults write com.apple.LaunchServices LSQuarantine -bool false
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
-defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool true
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write NSGlobalDomain _HIHideMenuBar -bool true
-defaults write NSGlobalDomain AppleHighlightColor -string "0.65098 0.85490 0.58431"
-defaults write NSGlobalDomain AppleAccentColor -int 1
-defaults write com.apple.screencapture location -string "$HOME/Desktop"
+defaults write com.apple.screencapture location -string "$HOME/Pictures"
 defaults write com.apple.screencapture disable-shadow -bool true
 defaults write com.apple.screencapture type -string "png"
-defaults write com.apple.finder DisableAllAnimations -bool true
+defaults write com.apple.finder DisableAllAnimations -bool false
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
-defaults write com.apple.Finder AppleShowAllFiles -bool true
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 defaults write com.apple.finder ShowStatusBar -bool false
@@ -116,26 +105,21 @@ python -m pip install tensorflow-metal
 conda install matplotlib
 conda install jupyterlab
 conda install seaborn
-conda install opencv
-conda install joblib
-conda install pytables
+conda install nltk
 pip install debugpy
 pip install sklearn
 
 # Start Services
-echo "Starting Services (grant permissions)..."
-brew services start skhd
-brew services start fyabai
+echo "Starting Services"
 brew services start sketchybar
-brew services start svim
 
-echo "Installing yabai scripting addition (!!sudo!!)"
-sudo yabai --install-sa
+# Install Vim Plug and Neovim packages
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-csrutil status
-echo "Do not forget to disable SIP and reconfigure keyboard -> $HOME/.config/keyboard..."
-open "$HOME/.config/keyboard/KeyboardModifierKeySetup.png"
-echo "Add sudoer manually:\n '$(whoami) ALL = (root) NOPASSWD: $(which yabai) --load-sa' to '/private/etc/sudoers.d/yabai'"
-echo "Manual Install Needed: Alfred"
-echo "Installation complete...\nRun nvim +PlugUpdate and Restart..."
+nvim '+PlugInstall | qa'
+nvim '+PlugUpdate | qa'
+
+
+echo "Setup complete!\nRun 'nvim +PlugUpdate' once more and restart..."
 
