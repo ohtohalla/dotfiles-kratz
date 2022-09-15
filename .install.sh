@@ -91,6 +91,9 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
+# Install Oh-My-Zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # Copying and checking out configuration files
 git clone git@github.com:ohtohalla/macos_dots.git --bare $HOME/.dots/
 alias config='/usr/bin/git --git-dir=$HOME/.dots --work-tree=$HOME'
