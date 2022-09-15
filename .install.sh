@@ -93,8 +93,8 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 # Copying and checking out configuration files
 echo "Planting Configuration Files..."
-[ ! -d "$HOME/dotfiles" ] && git clone --bare git@github.com:ohtohalla/dots.git $HOME/dotfiles
-git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout master
+[ ! -d "$HOME/dots" ] && git clone --bare git@github.com:ohtohalla/dots.git $HOME/dots
+git --git-dir=$HOME/dots/ --work-tree=$HOME checkout master
 
 source $HOME/.zshrc
 cfg config --local status.showUntrackedFiles no
