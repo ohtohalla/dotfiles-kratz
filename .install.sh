@@ -95,8 +95,9 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Copying and checking out configuration files
-git clone --bare git@github.com:ohtohalla/macos_dots.git $HOME/.dots/
 alias config='/usr/bin/git --git-dir=$HOME/.dots --work-tree=$HOME'
+echo ".dots" >> .gitignore
+git clone --bare git@github.com:ohtohalla/macos_dots.git $HOME/.dots/
 config config --local status.showUntrackedFiles no
 
 # Python Packages
