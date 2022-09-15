@@ -14,29 +14,15 @@ echo "Installing Brew Formulae..."
 brew tap homebrew/cask-fonts
 brew tap FelixKratz/formulae
 brew tap koekeishiya/formulae
+brew tap homebrew/cask-fonts
 
 # Brew Formulae
-brew install gsl
-brew install llvm
-brew install ccls
-brew install boost
-brew install libomp
-brew install armadillo
-brew install mas
 brew install neovim
-brew install tree
 brew install wget
-brew install jq
-brew install gh
 brew install ripgrep
 brew install rename
-brew install bear
 brew install neofetch
 brew install wireguard-go
-brew install gnuplot
-brew install lulu
-brew install ifstat
-brew install hdf5
 brew install mactex
 brew install starship
 brew install zsh-autosuggestions
@@ -50,34 +36,25 @@ brew install sf-symbols
 
 # Brew Casks
 echo "Installing Brew Casks..."
-brew install --cask inkscape
-brew install --cask moonlight
-brew install --cask mumble
-brew install --cask libreoffice
-brew install --cask alacritty
-brew install --cask spotify
-brew install --cask monitorcontrol
-brew install --cask sloth
 brew install --cask zoom
-brew install --cask skim
-brew install --cask meetingbar
-brew install --cask machoview
-brew install --cask hex-fiend
-brew install --cask cutter
-brew install --cask font-hack-nerd-font
 brew install --cask vlc
+brew install --cask tidal
+brew install --cask kitty
+brew install --cask r
+brew install --cask rstudio
+brew install --cask font-iosevka
+
 
 # Mac App Store Apps
 echo "Installing Mac App Store Apps..."
 mas install 1451685025 #Wireguard
 mas install 497799835 #xCode
 mas install 1480933944 #Vimari
+mac install 803453959 #Slack
 
 # macOS Settings
 echo "Changing macOS defaults..."
-defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-defaults write com.apple.spaces spans-displays -bool false
+defaults write com.apple.spaces spans-displays -bool true
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock "mru-spaces" -bool "false"
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
@@ -113,13 +90,8 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 # Copying and checking out configuration files
 echo "Planting Configuration Files..."
-[ ! -d "$HOME/dotfiles" ] && git clone --bare git@github.com:FelixKratz/dotfiles.git $HOME/dotfiles
+[ ! -d "$HOME/dotfiles" ] && git clone --bare git@github.com:ohtohalla/dots.git $HOME/dotfiles
 git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout master
-
-# Installing Fonts
-git clone git@github.com:shaunsingh/SFMono-Nerd-Font-Ligaturized.git /tmp/SFMono_Nerd_Font
-mv /tmp/SFMono_Nerd_Font/* $HOME/Library/Fonts
-rm -rf /tmp/SFMono_Nerd_Font/
 
 source $HOME/.zshrc
 cfg config --local status.showUntrackedFiles no
@@ -155,5 +127,5 @@ echo "Do not forget to disable SIP and reconfigure keyboard -> $HOME/.config/key
 open "$HOME/.config/keyboard/KeyboardModifierKeySetup.png"
 echo "Add sudoer manually:\n '$(whoami) ALL = (root) NOPASSWD: $(which yabai) --load-sa' to '/private/etc/sudoers.d/yabai'"
 echo "Manual Install Needed: Alfred"
-echo "Installation complete...\nRun nvim +PackerSync and Restart..."
+echo "Installation complete...\nRun nvim +PlugUpdate and Restart..."
 
