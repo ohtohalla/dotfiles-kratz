@@ -43,6 +43,7 @@ brew install --cask kitty
 brew install --cask r
 brew install --cask rstudio
 brew install --cask font-iosevka
+brew install --cask amethyst
 
 
 # Mac App Store Apps
