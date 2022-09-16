@@ -4,6 +4,10 @@
 echo "Installing commandline tools..."
 xcode-select --install
 
+# Install Rosetta 2
+echo "Installing Rosetta 2..."
+softwareupdate --install-rosetta
+
 # Install Brew
 echo "Installing Brew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -48,6 +52,7 @@ brew install --cask r
 brew install --cask rstudio
 brew install --cask font-iosevka
 brew install --cask amethyst
+brew install --cask rectangle
 
 
 # Mac App Store Apps
@@ -87,6 +92,7 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 # Install Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # Copying and checking out configuration files
 alias config='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
