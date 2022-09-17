@@ -89,6 +89,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # Copying and checking out configuration files
+rm ~/.zshrc
 alias config='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 echo ".dots" >> .gitignore
 git clone --bare git@github.com:ohtohalla/macos_dots.git $HOME/.dots/
