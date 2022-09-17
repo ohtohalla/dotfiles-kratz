@@ -90,6 +90,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 # Copying and checking out configuration files
 rm ~/.zshrc
+rm -rf ~/.dots
 alias config='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 echo ".dots" >> .gitignore
 git clone --bare git@github.com:ohtohalla/macos_dots.git $HOME/.dots/
