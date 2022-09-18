@@ -48,6 +48,8 @@ brew install --cask amethyst
 brew install --cask rectangle
 brew install --cask firefox-developer-edition
 brew install --cask vscodium
+brew install --cask qgis
+brew install --cask librewolf
 
 # Mac App Store Apps
 echo "Installing Mac App Store Apps..."
@@ -66,7 +68,7 @@ defaults write com.apple.spaces spans-displays -bool true
 defaults write com.apple.dock autohide -bool true
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool true
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-defaults write NSGlobalDomain _HIHideMenuBar -bool true
+defaults write NSGlobalDomain _HIHideMenuBar -bool false
 defaults write com.apple.screencapture location -string "$HOME/Pictures"
 defaults write com.apple.screencapture disable-shadow -bool true
 defaults write com.apple.screencapture type -string "png"
@@ -83,6 +85,7 @@ defaults write com.apple.finder ShowStatusBar -bool false
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool YES
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+killall Dock
 
 # Install Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -118,15 +121,18 @@ pip install sklearn
 
 # Install Vim Plug and Neovim packages
 
+echo "nvim" >> .gitignore
+
 mkdir -p ~/.config/nvim
 git clone https://github.com/ohtohalla/nvim-lsp-config/ ~/.config/nvim
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
        
+nvim '+PlugInstall | qa'
+nvim '+PlugUpdate | qa'
+       
 
-
-
-echo "Setup complete!\nRun 'nvim +PlugInstall' and restart..."
+echo "Setup complete!\nRun 'nvim +PlugUpdate' and restart...\n After restart install DataLore and DataGrip."
 
 
