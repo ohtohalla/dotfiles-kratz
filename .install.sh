@@ -35,7 +35,7 @@ brew install mas
 brew install nnn
 brew install aerc
 brew install docker
-brew tap ferdium/ferdium
+brew install ferdium
 
 
 # Brew Casks
