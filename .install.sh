@@ -33,6 +33,7 @@ brew install zsh-syntax-highlighting
 brew install mas
 brew install nnn
 brew install aerc
+brew install docker
 
 
 # Brew Casks
