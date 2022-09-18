@@ -21,6 +21,7 @@ brew analytics off
 echo "Installing Brew Formulae..."
 brew tap homebrew/cask-fonts
 brew tap homebrew/cask-versions
+brew tap ferdium/ferdium
 
 # Brew Formulae
 brew install neovim
@@ -34,6 +35,7 @@ brew install mas
 brew install nnn
 brew install aerc
 brew install docker
+brew tap ferdium/ferdium
 
 
 # Brew Casks
