@@ -66,6 +66,8 @@ mas install 874139669 #Signal
 echo "Changing macOS defaults..."
 defaults write com.apple.spaces spans-displays -bool true
 defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0.5
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool true
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write NSGlobalDomain _HIHideMenuBar -bool false
