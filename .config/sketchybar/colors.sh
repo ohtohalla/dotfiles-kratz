@@ -1,19 +1,21 @@
 #!/usr/bin/env sh
 
 # Color Palette
-BLACK=0xff181926
-WHITE=0xffcad3f5
-RED=0xffed8796
-GREEN=0xffa6da95
-BLUE=0xff8aadf4
-YELLOW=0xffeed49f
-ORANGE=0xfff5a97f
-MAGENTA=0xffc6a0f6
-GREY=0xff939ab7
+BLACK=0xff1d2021
+WHITE=0xffebdbb2
+RED=0xffcc241d
+GREEN=0xff98971a
+BLUE=0xff458588
+YELLOW=0xffd79921
+ORANGE=0xffd65d0e
+MAGENTA=0xffb16286
+GREY=0xff928374
+DARK_GREY=0xff282828
+
 TRANSPARENT=0x00000000
 
 # General bar colors
-BAR_COLOR=0xcc24273a #$GREY # Grey bar
+BAR_COLOR=$DARK_GREY # Grey bar
 ICON_COLOR=$WHITE # Color of all icons
 LABEL_COLOR=$WHITE # Color of all labels
 
@@ -22,5 +24,3 @@ POPUP_BORDER_COLOR=$WHITE
 
 SHADOW_COLOR=$BLACK
 
-# Item specific special colors
-SPOTIFY_GREEN=$GREEN

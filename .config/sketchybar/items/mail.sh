@@ -6,5 +6,5 @@ sketchybar --add item mail right                   \
                       background.padding_left=5  \
                       icon.font="$FONT:Bold:16.0"  \
                       icon=$MAIL                   \
-                      icon.color=$BLUE             \
+                      icon.color=$ORANGE             \
                       label=!

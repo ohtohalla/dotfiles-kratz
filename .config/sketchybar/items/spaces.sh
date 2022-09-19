@@ -10,12 +10,12 @@ do
                               icon=${SPACE_ICONS[i]}             \
                               icon.padding_left=22               \
                               icon.padding_right=22              \
-                              icon.highlight_color=$RED          \
+                              icon.highlight_color=$ORANGE          \
                               background.padding_left=-8         \
                               background.padding_right=-8        \
                               background.height=26               \
                               background.corner_radius=9         \
-                              background.color=0xff3C3E4F        \
+                              background.color=$BLACK            \
                               background.drawing=on              \
                               label.drawing=off                  \
                               click_script="$SPACE_CLICK_SCRIPT"
