@@ -53,6 +53,7 @@ brew install --cask firefox-developer-edition
 brew install --cask vscodium
 brew install --cask qgis
 brew install --cask librewolf
+brew install --cask zotero
 
 # Mac App Store Apps
 echo "Installing Mac App Store Apps..."
