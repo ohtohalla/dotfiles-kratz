@@ -1,0 +1,13 @@
+{
+    "editor_theme": "gruvboxr",
+    "initial_working_directory": "~",
+    "font_size_points": 11,
+    "posix_terminal_shell": "bash",
+    "highlight_selected_line": true,
+    "relative_line_numbers": true,
+    "show_invisibles": true,
+    "show_indent_guides": true,
+    "scroll_past_end_of_document": true,
+    "highlight_r_function_calls": true,
+    "rainbow_parentheses": true
+}
