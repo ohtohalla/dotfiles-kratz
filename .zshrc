@@ -137,11 +137,11 @@ unset __conda_setup
 # <<< conda initialize <<<
 export HOST=$(hostname)
 alias config='/usr/bin/git --git-dir=/$HOME/.dots/ --work-tree=/$HOME'
-export NNN_TMPFILE="$HOME/.config/nnn/.lastd"
-export VISUAL="$HOME/.config/nnn/plugins/selnew.sh"
 
 # NNN config
 
+export NNN_TMPFILE="$HOME/.config/nnn/.lastd"
+export VISUAL="$HOME/.config/nnn/plugins/selnew.sh"
 export NNN_OPTS="dEHor"
 export NNN_COLORS='12345678'
 export NNN_ARCHIVE="\\.(7z|bz2|gz|tar|tgz|zip)$"
