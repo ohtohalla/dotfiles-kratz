@@ -22,6 +22,7 @@ echo "Installing Brew Formulae..."
 brew tap homebrew/cask-fonts
 brew tap homebrew/cask-versions
 brew tap ferdium/ferdium
+brew tap koekeishiya/formulae
 
 # Brew Formulae
 brew install neovim
