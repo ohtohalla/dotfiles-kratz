@@ -40,6 +40,7 @@ brew install docker
 brew install ferdium
 brew install yabai
 brew install skhd
+brew install sketchybar
 
 
 # Brew Casks
