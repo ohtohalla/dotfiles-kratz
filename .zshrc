@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
  # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Adding lvim to PATH:
@@ -11,7 +18,8 @@ export ZSH="/$HOME/.oh-my-zsh"
 export PATH="/$HOME/.cargo/bin:$PATH"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -146,6 +154,9 @@ export NNN_OPTS="dEHor"
 export NNN_COLORS='12345678'
 export NNN_ARCHIVE="\\.(7z|bz2|gz|tar|tgz|zip)$"
 export NNN_TRASH=n # n=1: trash-cli, n=2: gio trash
-
+export NNN_USE_EDITOR=1
 
 #source /$HOME/.tmc-autocomplete.sh || true   
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
