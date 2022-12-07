@@ -22,6 +22,8 @@ echo "Installing Brew Formulae..."
 brew tap homebrew/cask-fonts
 brew tap homebrew/cask-versions
 brew tap ferdium/ferdium
+brew tap koekeishiya/formulae
+brew tap FelixKratz/formulae
 
 # Brew Formulae
 brew install neovim
@@ -36,6 +38,9 @@ brew install nnn
 brew install aerc
 brew install docker
 brew install ferdium
+brew install yabai
+brew install skhd
+brew install sketchybar
 
 
 # Brew Casks
@@ -137,6 +142,10 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        
 nvim '+PlugInstall | qa'
 nvim '+PlugUpdate | qa'
+
+# brew services start yabai
+# brew services start sketchybar
+# brew services start skhd
        
 
 echo "Setup complete!\nRun 'nvim +PlugUpdate' and restart...\n After restart install DataLore and DataGrip."

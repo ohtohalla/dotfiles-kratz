@@ -19,7 +19,10 @@ export PATH="/$HOME/.cargo/bin:$PATH"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7f6bcb9220486818cb5dfaaeda41aa69f401caaa
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -145,12 +148,12 @@ unset __conda_setup
 # <<< conda initialize <<<
 export HOST=$(hostname)
 alias config='/usr/bin/git --git-dir=/$HOME/.dots/ --work-tree=/$HOME'
-export NNN_TMPFILE="$HOME/.config/nnn/.lastd"
-export VISUAL="$HOME/.config/nnn/plugins/selnew.sh"
 
 # NNN config
 
-export NNN_OPTS="dEHor"
+export NNN_TMPFILE="$HOME/.config/nnn/.lastd"
+export VISUAL="$HOME/.config/nnn/plugins/selnew.sh"
+export NNN_OPTS="deEHor"
 export NNN_COLORS='12345678'
 export NNN_ARCHIVE="\\.(7z|bz2|gz|tar|tgz|zip)$"
 export NNN_TRASH=n # n=1: trash-cli, n=2: gio trash

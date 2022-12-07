@@ -10,4 +10,4 @@ else
   targets+=("\"$*\"")
 fi
 
-kitty msg create-window -e sh -c "cd \"$PWD\" && sleep 0.1 && $(which nvim) ${targets[*]}"
+kitty sh -c "cd \"$PWD\" && sleep 0.1 && $(which nvim) ${targets[*]}"
