@@ -61,6 +61,7 @@ brew install --cask qgis
 brew install --cask librewolf
 brew install --cask zotero
 brew install --cask hammerspoon
+brew install --cask obsidian
 
 # Mac App Store Apps
 echo "Installing Mac App Store Apps..."
