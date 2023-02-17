@@ -43,6 +43,7 @@ brew install skhd
 brew install sketchybar
 
 
+
 # Brew Casks
 echo "Installing Brew Casks..."
 brew install --cask zoom
@@ -59,6 +60,7 @@ brew install --cask vscodium
 brew install --cask qgis
 brew install --cask librewolf
 brew install --cask zotero
+brew install --cask hammerspoon
 
 # Mac App Store Apps
 echo "Installing Mac App Store Apps..."
