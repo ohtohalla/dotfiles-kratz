@@ -19,10 +19,10 @@ export PATH="/$HOME/.cargo/bin:$PATH"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
-<<<<<<< HEAD
+# <<<<<<< HEAD
 
-=======
->>>>>>> 7f6bcb9220486818cb5dfaaeda41aa69f401caaa
+# =======
+# >>>>>>> 7f6bcb9220486818cb5dfaaeda41aa69f401caaa
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
