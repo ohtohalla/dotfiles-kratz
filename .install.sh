@@ -62,6 +62,9 @@ brew install --cask librewolf
 brew install --cask zotero
 brew install --cask hammerspoon
 brew install --cask obsidian
+brew install --cask utm
+brew install --cask postman
+brew install --cask anki
 
 # Mac App Store Apps
 echo "Installing Mac App Store Apps..."
@@ -71,8 +74,8 @@ mas install 803453959 #Slack
 mas install 1511601750 #1Password 8
 mas install 1137397744 #Bitwarden
 mas install 874139669 #Signal
-
-
+mas install 535886823 #Chrome
+mas install 1113153706 #Teams
 
 # macOS Settings
 echo "Changing macOS defaults..."
